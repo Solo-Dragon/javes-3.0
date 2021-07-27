@@ -41,14 +41,14 @@ from ub.events import javes05
 from ub import CMD_HELP,  client
 import re
 TG_BOT_USER_NAME_BF_HER=os.environ.get("TG_BOT_USER_NAME_BF_HER",None)
-CUSTOM_CMD2=os.environ.get("CUSTOM_CMD2","!sh1vam")
-PROFILE_PPP = os.environ.get("PROFILE_PPP" , "https://telegra.ph/file/5d084db1197c6e7f0db59.jpg")
+CUSTOM_CMD2=os.environ.get("CUSTOM_CMD2","arise")
+PROFILE_PPP = os.environ.get("PROFILE_PPP" , "hhttps://i.imgur.com/LjXYUeR.jpg")
 ALIVE_PHOTTO = PROFILE_PPP
 @javes05(outgoing=True, pattern=f"^{CUSTOM_CMD2}(?: |$|\n)([\s\S]*)")
 async def glost(event):
     await event.delete()
     mt = await tebot.get_me()
-    results = await event.client.inline_query(mt.username, "javes" )
+    results = await event.client.inline_query(mt.username, "arise" )
     return await results[0].click( event.chat_id, reply_to=event.reply_to_msg_id, hide_via=False )
 v = "0.0.0"
 
@@ -101,7 +101,7 @@ if TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         result = None
         query = event.text
         me = await client.get_me()
-        if query.startswith("javes") and event.query.user_id == me.id:
+        if query.startswith("userbot") and event.query.user_id == me.id:
             buttons = [
                 (
                     Button.url("Repo", "https://github.com/Sh1vam/javes-3.0"),
@@ -120,18 +120,18 @@ if TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             elif ALIVE_PHOTTO:
                 result = builder.document(
                     ALIVE_PHOTTO,
-                    title="Sh1vam",
+                    title="Shadow Monarch",
                     text=_s_h_i_v_v_m_,
                     buttons=buttons,
                 )
             else:
                 result = builder.article(
-                    title="Javes 3.0",
+                    title="Arise",
                     text=_s_h_i_v_v_m_,
                     buttons=buttons,
                 )
             await event.answer([result] if result else None)
         if not event.query.user_id == me.id:
-            resultm = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="exec ", same_peer=True)],], )
+            resultm = builder.article(title="I ain't your shadow",description="Mind Your own Business",text="Btw Check out https://t.me/AnimixChat",buttons=[[Button.switch_inline("Search Again", query="exec ", same_peer=True)],], )
             await event.answer([resultm])
             return
