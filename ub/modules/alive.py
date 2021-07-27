@@ -30,7 +30,7 @@ S3_NAME = os.environ.get("S3_NAME", JAVES_NNAME)
 S2_USER = os.environ.get("S2_USER", DEFAULTUSER)
 S3_USER = os.environ.get("S3_USER", DEFAULTUSER)
 
-v = "0.0.0"
+v = "7.3.1"
 
 if rksu:
  if FULL_SUDO:
@@ -61,9 +61,9 @@ else:
 	logrk = '[Failed to connect](https://telegra.ph/RkPavi-06-09-3)'
 
 
-@client.on(events.NewMessage(outgoing=True, pattern='!javes'))
+@client.on(events.NewMessage(outgoing=True, pattern='!igris'))
 async def alive(alive):
-    await alive.edit(""
+    await alive.edit(""[°](https://i.imgur.com/uCN0wlx.mp4)
                     f"**{ALIVE_S_MMSG}**\n\n"                     
                     f" °  `{JAVES_NNAME}`: **{v}**\n"
                     f" °  `User:` ** {DEFAULTUSER} **\n"
@@ -78,9 +78,9 @@ async def alive(alive):
                     f"**{ALIVE_E_MMSG}**")
 
 if client2:
- @client2.on(events.NewMessage(outgoing=True, pattern='!javes'))
+ @client2.on(events.NewMessage(outgoing=True, pattern='!beru'))
  async def alive(alive):
-    await alive.edit(""
+    await alive.edit(""[°](https://i.imgur.com/uCN0wlx.mp4)
                     f"**{ALIVE_S_MMSG}**\n\n"                     
                     f" °  `{S2_NAME}`: **{v}**\n"
                     f" °  `User:` ** {S2_USER} **\n"
@@ -95,9 +95,9 @@ if client2:
                     f"**{ALIVE_E_MMSG}**")
 
 if client3:
- @client3.on(events.NewMessage(outgoing=True, pattern='!javes'))
+ @client3.on(events.NewMessage(outgoing=True, pattern='!kamish'))
  async def alive(alive):
-    await alive.edit(""
+    await alive.edit(""[°](https://i.imgur.com/uCN0wlx.mp4)
                     f"**{ALIVE_S_MMSG}**\n\n"                     
                     f" °  `{S3_NAME}`: **{v}**\n"
                     f" °  `User:` ** {S3_USER} **\n"
@@ -122,7 +122,7 @@ async def alive(alive):
 
 
 @bot.on(rekcah05(pattern=f"sudo$", allow_sudo=True))
-@bot.on(rekcah05(pattern=f"javes$", allow_sudo=True))
+@bot.on(rekcah05(pattern=f"authority$", allow_sudo=True))
 async def alive(alive):
     await alive.reply(""
                     f"**{ALIVE_S_MMSG}**\n\n"                     
