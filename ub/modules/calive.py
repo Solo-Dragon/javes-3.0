@@ -17,7 +17,7 @@ ALIVE_PHOTTO = PROFILE_PP
 async def gtlost(event):
     await event.delete()
     mt = await tebot.get_me()
-    results = await event.client.inline_query(mt.username, "alive" )
+    results = await event.client.inline_query(mt.username, "coolbot" )
     return await results[0].click( event.chat_id, reply_to=event.reply_to_msg_id, hide_via=False )
 if TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
 
@@ -40,24 +40,24 @@ if TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 result = builder.photo(
                     ALIVE_PHOTTO,
                     # title="Shivam",
-                    text="Iam On type` !javes `or` !help ` or ` .hlp `for more info",
+                    text="The Shadows are beneath the hunter \n` !help ` or ` .hlp `for more info",
                     buttons=buttons,
                 )
             elif ALIVE_PHOTTO:
                 result = builder.document(
                     ALIVE_PHOTTO,
-                    title="Sh1vam",
-                    text="Iam On type` !javes `or` !help ` or ` .hlp `for more info",
+                    title="4r153",
+                    text="The Shadows are beneath the hunter \n` !help ` or ` .hlp `for more info",
                     buttons=buttons,
                 )
             else:
                 result = builder.article(
                     title="Javes 3.0",
-                    text="Iam On type` !javes `or` !help ` or ` .hlp `for more info",
+                    text="Awaiting Your orders\n Type !help ` or ` .hlp `for more info",
                     buttons=buttons,
                 )
             await event.answer([result] if result else None)
         if not event.query.user_id == me.id:
-            resultm = builder.article(title="me not your bot",description="Mind Your Business",text="Hey U Must Use https://github.com/Sh1vam/javes-3.0  ",buttons=[[Button.switch_inline("Search Again", query="exec ", same_peer=True)],], )
+            resultm = builder.article(title="You dont possess the powers of the Shadow Monarch",description="Mind Your own Business",text="Hey U Must see https://t.me/animixchat  ",buttons=[[Button.switch_inline("Search Again", query="exec ", same_peer=True)],], )
             await event.answer([resultm])
             return

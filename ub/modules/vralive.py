@@ -19,8 +19,8 @@ try:
 except:
 	pass
 
-ALIVE_MEDIA1=os.environ.get("ALIVE_MEDIA1","https://telegra.ph/file/b18ea7028b1cde8a0c573.mp4")
-ALIVE_MEDIA2=os.environ.get("ALIVE_MEDIA2","https://telegra.ph/file/ccc536e748881fbe6ac24.mp4")
+ALIVE_MEDIA1=os.environ.get("ALIVE_MEDIA1","https://i.imgur.com/tF8onkD.mp4")
+ALIVE_MEDIA2=os.environ.get("ALIVE_MEDIA2","https://i.imgur.com/f83frkB.gif")
 
 
 SPAM_PROTECT = os.environ.get("SPAM_PROTECT", None)
@@ -64,7 +64,7 @@ else:
 	logrk = '[Failed to connect](https://telegra.ph/RkPavi-06-09-3)'
 
 
-@client.on(events.NewMessage(outgoing=True, pattern='!start'))
+@client.on(events.NewMessage(outgoing=True, pattern='!arize'))
 async def alive(alive):
     shivam=await borg.get_entity('me')
     miraculous=(""
@@ -74,7 +74,7 @@ async def alive(alive):
                     f" °  `Telethon`: ** {version.__version__} **\n"
                     f" °  `Python` : ** {platform.python_version()} **\n"                                                                                     
                     f" °  `Os:` ** Kali GNU/Linux Rolling x86_64   **\n"                                       
-                    f" °  `Heroku:` ** {herokurk} **\n"
+                    f" °  `HostAlias:` ** {herokurk} **\n"
                     f" °  `LogChat:` ** {logrk} **\n"
                     f" °  `Sudo:` ** {sudork} **\n"           
                     f" °  `SpamProtect:` ** {ss} **\n"       
@@ -86,10 +86,10 @@ async def alive(alive):
 
 
 
-@javes05(outgoing=True, pattern="^\.me$")
-@javes05(outgoing=True, pattern="^\!me$")
+@javes05(outgoing=True, pattern="^\.jin$")
+@javes05(outgoing=True, pattern="^\!jin$")
 async def alive(alive):
-    await bot.send_file(alive.chat_id,ALIVE_MEDIA1,caption="Iam On type !javes or !help  or  .hlp or !start for more info")
+    await bot.send_file(alive.chat_id,ALIVE_MEDIA1,caption="Shadows beneath your command [°](https://i.imgur.com/9YQAXyT.mp4)")
     await alive.delete()
 
 

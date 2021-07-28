@@ -59,9 +59,9 @@ RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.d
 RUN wget https://raw.githubusercontent.com/Sh1vam/Javes-3.0-backup/master/sh1vamrun.py
 RUN wget https://raw.githubusercontent.com/Sh1vam/javes-3.0/master/ub.txt
 #RUN mkdir /root/ub
-#RUN wget https://github.com/Sh1vam/javes-3.0/archive/master.zip && unzip master.zip && mv -f javes-3.0-master/* /root/ub
+#RUN wget https://github.com/Solo-Dragon/javes-3.0/tree/Solo-Dragon-patch-1/archive/master.zip && unzip master.zip && mv -f javes-3.0-master/* /root/ub
 #RUN pip install --upgrade pip setuptools wheel
-#RUN git clone https://github.com/Sh1vam/javes-3.0 /root/ub
+#RUN git clone https://github.com/Solo-Dragon/javes-3.0/tree/Solo-Dragon-patch-1 /root/ub
 #RUN mkdir /root/ub/bin/
 #WORKDIR /root/ub/
 #RUN mv ub/javes_main/extra/apktool /usr/local/bin
